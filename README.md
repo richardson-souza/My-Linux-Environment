@@ -31,8 +31,8 @@ $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 ## Flatpak  
 
-Flatpak is a universal packaging system from Fedora. Like Snap, you can install Flatpak packaged applications in various Linux distributions that support Flatpak.
-Snap is cool, but I had a lot of trouble usuing it. So, I tried to use flatpak and worked very well.
+Flatpak is a universal packaging system from Fedora. Like Snap, you can install Flatpak packaged applications in various Linux distributions that support Flatpak.  
+Snap is cool, but I had a lot of trouble usuing it. So, I tried to use flatpak and worked very well.  
 I loved it.
 
 ```bash
