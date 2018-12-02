@@ -35,6 +35,35 @@ $ sudo apt install ubuntu-restricted-extras
 $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
 
+## Gnome Tweaks
+
+```bash
+$ sudo apt install gnome-tweaks
+```
+## Curl
+
+```bash
+$ sudo apt install curl
+```
+
+## Java  
+
+```bash
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt-get install oracle-java8-installer
+$ java -version
+$ javac -version
+```
+
+## Node  
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ source ~/.bashrc
+$ nvm ls-remote
+$ nvm install 8.14.0
+```
+
 ## Flatpak  
 
 Flatpak is a universal packaging system from Fedora. Like Snap, you can install Flatpak packaged applications in various Linux distributions that support Flatpak.  
@@ -156,6 +185,11 @@ $ flatpak install flathub org.gnome.Podcasts
 $ flatpak install flathub org.videolan.VLC
 ```  
 
+## Acknowledgments
+
+[FOSS](https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/)
+[OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)
+[NVM](https://github.com/creationix/nvm)
 
  
 
