@@ -76,6 +76,12 @@ See and install others apps in [Flathub](https://flathub.org/home)
 $ flatpak install flathub com.google.AndroidStudio
 ```  
 
+### Code
+
+```bash 
+$ flatpak install flathub com.visualstudio.code
+```  
+
 ### Arduino
 
 ```bash
@@ -100,25 +106,32 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 $ flatpak install flathub org.inkscape.Inkscape
 ```  
 
+### Kdenlive
 
+```bash 
+$ flatpak install flathub org.kde.kdenlive
+```  
 
+### LibreOffice
 
+```bash 
+$ flatpak install flathub org.libreoffice.LibreOffice
+```  
 
+### Mendeley
 
+```bash 
+$ flatpak install flathub com.elsevier.MendeleyDesktop
+```  
 
+### Slack
 
+```bash 
+$ flatpak install flathub com.slack.Slack
+```  
 
+### Spotify
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```bash 
+$ flatpak install flathub com.spotify.Client
+```  
