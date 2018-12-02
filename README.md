@@ -209,16 +209,33 @@ $ ionic serve
 
 ```bash 
 $ sudo apt install adb
-$ export ANDROID_HOME=/home/rsouza/Android/Sdk
-$ export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
-$ sorce ~/.bashrc
+```  
+Open the file:
+
+```bash 
+$ vim ~/.bashrc
+```  
+Add in the end of file:
+ANDROID_HOME=/home/rsouza/Android/Sdk
+PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
+
+![bashrc](img01.png)  
+
+Continue...
+
+```bash 
+$ source ~/.bashrc
 $ curl -s "https://get.sdkman.io" | bash
 $ source ~/.bashrc
 $ sdk version
 $ sdk install gradle 5.0
-$ ionic cordova run android --device
 ```  
 
+Now, inside de project execute:
+
+```bash 
+$ $ ionic cordova run android --device
+```  
 
 ## Acknowledgments
 
