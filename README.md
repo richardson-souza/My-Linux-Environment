@@ -234,7 +234,7 @@ $ sdk install gradle 5.0
 Now, inside de project execute:
 
 ```bash 
-$ $ ionic cordova run android --device
+$ ionic cordova run android --device
 ```  
 
 ## Acknowledgments
