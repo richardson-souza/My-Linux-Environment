@@ -221,7 +221,7 @@ PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/buil
 
 ![bashrc](img01.png)  
 
-SAve, exit and continue:
+Save, exit and continue:
 
 ```bash 
 $ source ~/.bashrc
