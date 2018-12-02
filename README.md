@@ -17,6 +17,12 @@ $ sudo sed -i 's/# deb http/deb http/g' /etc/apt/sources.list
 $ sudo apt update
 ```
 
+## InstallBuild Essential
+
+```bash
+$ sudo apt install build-essential
+```
+
 ## Install Media Codecs
 
 ```bash
@@ -47,6 +53,71 @@ And restart the system
 ```bash
 $ sudo shutdown -r now
 ```  
+
+## Now install some apps from FLATHUB
+
+Search for apps:
+
+```bash
+$ flatpak search gimp
+```  
+
+And install:
+
+```bash
+$ flatpak install flathub org.gimp.GIMP
+```  
+
+See and install others apps in [Flathub](https://flathub.org/home)  
+
+### Android Studio
+
+```bash
+$ flatpak install flathub com.google.AndroidStudio
+```  
+
+### Arduino
+
+```bash
+$ flatpak install flathub cc.arduino.arduinoide
+```  
+
+### Atom
+
+```bash
+$ flatpak install flathub io.atom.Atom
+```  
+
+### DBeaver Community
+
+```bash 
+$ flatpak install flathub io.dbeaver.DBeaverCommunity
+```  
+
+### Inkscape
+
+```bash 
+$ flatpak install org.inkscape.Inkscape
+```  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
