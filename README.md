@@ -1,4 +1,4 @@
-# My Linux Development Environment  
+# My Linux Environment  
 
 Setup and software of my personal laptop, powered by Ubuntu Linux 18.04.  
 
