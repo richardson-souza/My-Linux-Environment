@@ -215,8 +215,8 @@ Open the file:
 ```bash 
 $ vim ~/.bashrc
 ```  
-Add in the end of file:
-ANDROID_HOME=/home/rsouza/Android/Sdk
+Add in the end of file:  
+ANDROID_HOME=/home/rsouza/Android/Sdk  
 PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
 
 ![bashrc](img01.png)  
