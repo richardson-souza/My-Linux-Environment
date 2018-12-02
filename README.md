@@ -53,6 +53,9 @@ $ sudo add-apt-repository ppa:webupd8team/java
 $ sudo apt-get install oracle-java8-installer
 $ java -version
 $ javac -version
+$ JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+$ export JAVA_HOME
+$ source ~/.bashrc
 ```
 
 ## Node  
@@ -106,6 +109,7 @@ See and install others apps in [Flathub](https://flathub.org/home)
 ```bash
 $ flatpak install flathub com.google.AndroidStudio
 ```  
+Start Android Studio application, configure, install sdk and create a empty project to test.
 
 ### Code
 
@@ -161,6 +165,12 @@ $ flatpak install flathub com.elsevier.MendeleyDesktop
 $ flatpak install flathub com.slack.Slack
 ```  
 
+### Telegram
+
+```bash 
+$ flatpak install flathub org.telegram.desktop
+```  
+
 ### Spotify
 
 ```bash 
@@ -185,11 +195,36 @@ $ flatpak install flathub org.gnome.Podcasts
 $ flatpak install flathub org.videolan.VLC
 ```  
 
+## IONIC
+
+```bash 
+$ npm install -g ionic
+$ npm install -g cordova
+$ ionic start myApp tabs
+$ cd myApp/
+$ ionic serve
+```  
+
+### Build on device
+
+```bash 
+$ sudo apt install adb
+$ export ANDROID_HOME=/home/rsouza/Android/Sdk
+$ export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
+$ sorce ~/.bashrc
+$ curl -s "https://get.sdkman.io" | bash
+$ source ~/.bashrc
+$ sdk version
+$ sdk install gradle 5.0
+$ ionic cordova run android --device
+```  
+
+
 ## Acknowledgments
 
 [FOSS](https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/)  
 [OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)  
 [NVM](https://github.com/creationix/nvm)  
-
+[IONIC](https://ionicframework.com/docs/intro/installation/)
  
 
