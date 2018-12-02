@@ -97,7 +97,7 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 ### Inkscape
 
 ```bash 
-$ flatpak install org.inkscape.Inkscape
+$ flatpak install flathub org.inkscape.Inkscape
 ```  
 
 
