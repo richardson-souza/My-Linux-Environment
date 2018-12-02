@@ -1,6 +1,6 @@
 # My Linux Environment  
 
-Setup and software of my personal laptop, powered by Ubuntu Linux 18.04.  
+Setup and software of my personal laptop, powered by [Ubuntu Linux 18.04](http://mirror.globo.com/ubuntu/releases/18.04.1/ubuntu-18.04.1-desktop-amd64.iso).  
 
 ## First Update
 
@@ -17,7 +17,7 @@ $ sudo sed -i 's/# deb http/deb http/g' /etc/apt/sources.list
 $ sudo apt update
 ```
 
-## InstallBuild Essential
+## Install Build Essential
 
 ```bash
 $ sudo apt install build-essential
@@ -29,7 +29,7 @@ $ sudo apt install build-essential
 $ sudo apt install ubuntu-restricted-extras
 ```
 
-## Enable ‘Minimize on Click’ for the Ubuntu Dock
+## Enable 'Minimize on Click' for the Ubuntu Dock
 
 ```bash
 $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
@@ -69,6 +69,8 @@ $ flatpak install flathub org.gimp.GIMP
 ```  
 
 See and install others apps in [Flathub](https://flathub.org/home)  
+
+[Flatpak command](http://docs.flatpak.org/en/latest/using-flatpak.html#the-flatpak-command)
 
 ### Android Studio
 
@@ -135,3 +137,25 @@ $ flatpak install flathub com.slack.Slack
 ```bash 
 $ flatpak install flathub com.spotify.Client
 ```  
+
+### Transmission
+
+```bash 
+$ flatpak install flathub com.transmissionbt.Transmission
+```  
+
+### Podcasts
+
+```bash 
+$ flatpak install flathub org.gnome.Podcasts
+```  
+
+### VLC
+
+```bash 
+$ flatpak install flathub org.videolan.VLC
+```  
+
+
+ 
+
