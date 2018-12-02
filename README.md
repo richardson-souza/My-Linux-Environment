@@ -187,9 +187,9 @@ $ flatpak install flathub org.videolan.VLC
 
 ## Acknowledgments
 
-[FOSS](https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/)
-[OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)
-[NVM](https://github.com/creationix/nvm)
+[FOSS](https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/)  
+[OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)  
+[NVM](https://github.com/creationix/nvm)  
 
  
 
