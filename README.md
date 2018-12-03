@@ -67,6 +67,14 @@ $ nvm ls-remote
 $ nvm install 8.14.0
 ```
 
+## Anaconda
+```bash
+$ cd /tmp
+$ wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+$ bash ./Anaconda3-5.3.1-Linux-x86_64.sh
+$ conda update --all
+```
+
 ## Flatpak  
 
 Flatpak is a universal packaging system from Fedora. Like Snap, you can install Flatpak packaged applications in various Linux distributions that support Flatpak.  
