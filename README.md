@@ -124,6 +124,17 @@ Start Android Studio application, configure, install sdk and create a empty proj
 ```bash 
 $ flatpak install flathub com.visualstudio.code
 ```  
+[vscode is not able to detected bash as terminal](https://github.com/flathub/com.visualstudio.code/issues/39)  
+
+Shell arguments
+
+You can pass arguments to the shell when it is launched.
+
+For example, to enable running bash as a login shell (which runs .bash_profile), pass in the -l argument (with double quotes):
+// Linux
+"terminal.integrated.shellArgs.linux": ["-l"]
+
+https://code.visualstudio.com/docs/editor/integrated-terminal#_shell-arguments
 
 ### Arduino
 
