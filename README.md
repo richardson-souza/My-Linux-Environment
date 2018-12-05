@@ -212,6 +212,7 @@ $ ionic start myApp tabs
 $ cd myApp/
 $ ionic serve
 ```  
+If it works smoothly continue to build on Android device
 
 ### Build on device
 
