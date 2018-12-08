@@ -17,10 +17,10 @@ $ sudo sed -i 's/# deb http/deb http/g' /etc/apt/sources.list
 $ sudo apt update
 ```
 
-## Install Build Essential
+## Install Build Essential, Python-setuptools and Python-dev
 
 ```bash
-$ sudo apt install build-essential
+$ sudo apt install build-essential python-setuptools python-dev
 ```
 
 ## Install Media Codecs
