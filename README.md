@@ -161,6 +161,7 @@ Now, inside de project execute:
 ```bash 
 $ ionic cordova run android --device
 ```  
+##Install more applications with Flathub
 
 ### Code
 
