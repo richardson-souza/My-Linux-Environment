@@ -58,15 +58,6 @@ $ export JAVA_HOME
 $ source ~/.bashrc
 ```
 
-## Node  
-
-```bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-$ source ~/.bashrc
-$ nvm ls-remote
-$ nvm install 8.14.0
-```
-
 ## Anaconda
 ```bash
 $ cd /tmp
@@ -117,7 +108,59 @@ See and install others apps in [Flathub](https://flathub.org/home)
 ```bash
 $ flatpak install flathub com.google.AndroidStudio
 ```  
-Start Android Studio application, configure, install sdk and create a empty project to test.
+Start Android Studio application, configure, install sdk and create a empty project to test.  
+
+## Node  
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ source ~/.bashrc
+$ nvm ls-remote
+$ nvm install 8.14.0
+```  
+
+## IONIC
+
+```bash 
+$ npm install -g ionic
+$ npm install -g cordova
+$ ionic start myApp tabs
+$ cd myApp/
+$ ionic serve
+```  
+If it works smoothly continue to build on Android device
+
+### Build on device
+
+```bash 
+$ sudo apt install adb
+```  
+Open the file:
+
+```bash 
+$ vim ~/.bashrc
+```  
+Add in the end of file:  
+ANDROID_HOME=/home/rsouza/Android/Sdk  
+PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
+
+![bashrc](img01.png)  
+
+Save, exit and continue:
+
+```bash 
+$ source ~/.bashrc
+$ curl -s "https://get.sdkman.io" | bash
+$ source ~/.bashrc
+$ sdk version
+$ sdk install gradle 5.0
+```  
+
+Now, inside de project execute:
+
+```bash 
+$ ionic cordova run android --device
+```  
 
 ### Code
 
@@ -212,49 +255,6 @@ $ flatpak install flathub org.gnome.Podcasts
 
 ```bash 
 $ flatpak install flathub org.videolan.VLC
-```  
-
-## IONIC
-
-```bash 
-$ npm install -g ionic
-$ npm install -g cordova
-$ ionic start myApp tabs
-$ cd myApp/
-$ ionic serve
-```  
-If it works smoothly continue to build on Android device
-
-### Build on device
-
-```bash 
-$ sudo apt install adb
-```  
-Open the file:
-
-```bash 
-$ vim ~/.bashrc
-```  
-Add in the end of file:  
-ANDROID_HOME=/home/rsouza/Android/Sdk  
-PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
-
-![bashrc](img01.png)  
-
-Save, exit and continue:
-
-```bash 
-$ source ~/.bashrc
-$ curl -s "https://get.sdkman.io" | bash
-$ source ~/.bashrc
-$ sdk version
-$ sdk install gradle 5.0
-```  
-
-Now, inside de project execute:
-
-```bash 
-$ ionic cordova run android --device
 ```  
 
 ## Acknowledgments
