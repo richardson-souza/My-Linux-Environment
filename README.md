@@ -113,7 +113,7 @@ Start Android Studio application, configure, install sdk and create a empty proj
 ## Node  
 
 ```bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 $ source ~/.bashrc
 $ nvm ls-remote
 $ nvm install 8.14.0
