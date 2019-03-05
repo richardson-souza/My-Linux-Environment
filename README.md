@@ -116,13 +116,13 @@ Start Android Studio application, configure, install sdk and create a empty proj
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 $ source ~/.bashrc
 $ nvm ls-remote
-$ nvm install 8.15.0
+$ nvm install 8.15.1
 ```  
 
 ## IONIC
 
 ```bash 
-$ npm install -g ionic
+$ npm install -g ionic@latest-3
 $ npm install -g cordova
 $ ionic start myApp tabs
 $ cd myApp/
