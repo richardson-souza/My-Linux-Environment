@@ -35,10 +35,11 @@ $ sudo apt install ubuntu-restricted-extras
 $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
 
-## Gnome Tweaks
+## Gnome Tweaks and Show/Hide All Hidden Startup Applications
 
 ```bash
 $ sudo apt install gnome-tweaks
+$ sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 ```
 ## Curl
 
