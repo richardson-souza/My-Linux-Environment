@@ -1,6 +1,6 @@
 # My Linux Environment  
 
-Setup and software of my personal laptop, powered by [Ubuntu Linux 18.04](http://mirror.globo.com/ubuntu/releases/18.04.1/ubuntu-18.04.1-desktop-amd64.iso).  
+Setup and software of my personal laptop, powered by [Ubuntu Linux 19.04](http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso).  
 
 ## First Update
 
@@ -50,66 +50,8 @@ $ sudo apt install curl
 ## Java  
 
 ```bash
-$ sudo add-apt-repository ppa:webupd8team/java
-$ sudo apt-get install oracle-java8-installer
-$ java -version
-$ javac -version
-$ JAVA_HOME="/usr/lib/jvm/java-8-oracle"
-$ export JAVA_HOME
-$ source ~/.bashrc
+
 ```
-
-## Anaconda
-```bash
-$ cd /tmp
-$ wget https://repo.anaconda.com/archive/Anaconda3-5.3.1-Linux-x86_64.sh
-$ bash ./Anaconda3-5.3.1-Linux-x86_64.sh
-$ conda update --all
-```
-
-## Flatpak  
-
-Flatpak is a universal packaging system from Fedora. Like Snap, you can install Flatpak packaged applications in various Linux distributions that support Flatpak.  
-Snap is cool, but I had a lot of trouble usuing it. So, I tried to use flatpak and worked very well.  
-I loved it.
-
-```bash
-$ sudo add-apt-repository ppa:alexlarsson/flatpak
-$ sudo apt install flatpak
-$ sudo apt install gnome-software-plugin-flatpak
-$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```  
-
-And restart the system
-
-```bash
-$ sudo shutdown -r now
-```  
-
-## Now install some apps from FLATHUB
-
-Search for apps:
-
-```bash
-$ flatpak search gimp
-```  
-
-And install:
-
-```bash
-$ flatpak install flathub org.gimp.GIMP
-```  
-
-See and install others apps in [Flathub](https://flathub.org/home)  
-
-[Flatpak command](http://docs.flatpak.org/en/latest/using-flatpak.html#the-flatpak-command)
-
-### Android Studio
-
-```bash
-$ flatpak install flathub com.google.AndroidStudio
-```  
-Start Android Studio application, configure, install sdk and create a empty project to test.  
 
 ## Node  
 
@@ -117,7 +59,7 @@ Start Android Studio application, configure, install sdk and create a empty proj
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 $ source ~/.bashrc
 $ nvm ls-remote
-$ nvm install 8.15.1
+$ nvm install 8.16.0
 ```  
 
 ## IONIC
@@ -142,10 +84,8 @@ Open the file:
 $ vim ~/.bashrc
 ```  
 Add in the end of file:  
-ANDROID_HOME=/home/rsouza/Android/Sdk  
-PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
-
-![bashrc](img01.png)  
+ANDROID_SDK_ROOT=/home/rsouza/Android/Sdk  
+PATH=${PATH}:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools
 
 Save, exit and continue:
 
@@ -162,95 +102,9 @@ Now, inside de project execute:
 ```bash 
 $ ionic cordova run android --device
 ```  
-## Install more applications with Flathub
-
-### Code
-
-```bash 
-$ flatpak install flathub com.visualstudio.code
-```  
-
-### Arduino
-
-```bash
-$ flatpak install flathub cc.arduino.arduinoide
-```  
-
-### Atom
-
-```bash
-$ flatpak install flathub io.atom.Atom
-```  
-
-### DBeaver Community
-
-```bash 
-$ flatpak install flathub io.dbeaver.DBeaverCommunity
-```  
-
-### Inkscape
-
-```bash 
-$ flatpak install flathub org.inkscape.Inkscape
-```  
-
-### Kdenlive
-
-```bash 
-$ flatpak install flathub org.kde.kdenlive
-```  
-
-### LibreOffice
-
-```bash 
-$ flatpak install flathub org.libreoffice.LibreOffice
-```  
-
-### Mendeley
-
-```bash 
-$ flatpak install flathub com.elsevier.MendeleyDesktop
-```  
-
-### Slack
-
-```bash 
-$ flatpak install flathub com.slack.Slack
-```  
-
-### Telegram
-
-```bash 
-$ flatpak install flathub org.telegram.desktop
-```  
-
-### Spotify
-
-```bash 
-$ flatpak install flathub com.spotify.Client
-```  
-
-### Transmission
-
-```bash 
-$ flatpak install flathub com.transmissionbt.Transmission
-```  
-
-### Podcasts
-
-```bash 
-$ flatpak install flathub org.gnome.Podcasts
-```  
-
-### VLC
-
-```bash 
-$ flatpak install flathub org.videolan.VLC
-```  
 
 ## Acknowledgments
 
-[FOSS](https://itsfoss.com/things-to-do-after-installing-ubuntu-18-04/)  
 [OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)  
 [NVM](https://github.com/creationix/nvm)  
 [IONIC](https://ionicframework.com/docs/intro/installation/)
