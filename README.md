@@ -20,7 +20,7 @@ $ sudo apt update
 ## Install Build Essential, Python-setuptools and Python-dev
 
 ```bash
-$ sudo apt install build-essential python-setuptools python-dev
+$ sudo apt install build-essential python-setuptools python-dev python3-distutils
 ```
 
 ## Install Media Codecs
