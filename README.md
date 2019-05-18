@@ -59,7 +59,7 @@ $ sudo rm -rf jdk-8u211-linux-x64.tar.gz
 ```
 Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_211/bin:/usr/lib/jvm/jdk1.8.0_211/db/bin:/usr/lib/jvm/jdk1.8.0_211/jre/bin
 
-
+![/etc/environment](img01.png)  
 
 ## Node  
 
