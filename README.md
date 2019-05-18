@@ -63,7 +63,18 @@ Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_211/bin:/usr/li
 
 Open thw file ".bashrc" and insert:
 
-![bashrc](img02.png)
+![bashrc](img02.png)  
+
+```bash
+$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_211/bin/java" 0
+$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_211/bin/javac" 0
+$ sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_211/bin/java
+$ sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_211/bin/javac
+$ update-alternatives --list java
+$ update-alternatives --list javac
+$ java -version
+$ javac -version
+```  
 
 ## Node  
 
