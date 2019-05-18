@@ -47,11 +47,19 @@ $ sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 $ sudo apt install curl
 ```
 
-## Java  
+## Java 8  
+
+Download [JDK 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) 
 
 ```bash
-
+$ sudo cp jdk-8u211-linux-x64.tar.gz /usr/lib/jvm/
+$ cd /usr/lib/jvm/
+$ sudo tar -xvzf jdk-8u211-linux-x64.tar.gz
+$ sudo rm -rf jdk-8u211-linux-x64.tar.gz
 ```
+Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_211/bin:/usr/lib/jvm/jdk1.8.0_211/db/bin:/usr/lib/jvm/jdk1.8.0_211/jre/bin
+
+
 
 ## Node  
 
