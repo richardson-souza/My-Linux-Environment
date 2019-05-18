@@ -140,7 +140,7 @@ $ sudo systemctl status docker
 $ sudo usermod -aG docker $USER
 ``` 
 
-Resetart the system.  
+Restart the system.  
 
 ## Acknowledgments
 
