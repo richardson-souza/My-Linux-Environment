@@ -61,6 +61,10 @@ Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_211/bin:/usr/li
 
 ![/etc/environment](img01.png)  
 
+Open thw file ".bashrc" and insert:
+
+![bashrc](img02.png)
+
 ## Node  
 
 ```bash
