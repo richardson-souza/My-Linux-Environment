@@ -128,6 +128,20 @@ Now, inside de project execute:
 $ ionic cordova run android --device
 ```  
 
+### Docker  
+
+```bash 
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge test"
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+$ sudo systemctl status docker
+$ sudo usermod -aG docker $USER
+``` 
+
+Resetart the system.  
+
 ## Acknowledgments
 
 [OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)  
