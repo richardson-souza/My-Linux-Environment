@@ -110,6 +110,8 @@ Add in the end of file:
 ANDROID_SDK_ROOT=/home/rsouza/Android/Sdk  
 PATH=${PATH}:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/build-tools
 
+![android](img03.png) 
+
 Save, exit and continue:
 
 ```bash 
