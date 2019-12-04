@@ -52,12 +52,12 @@ $ sudo apt install curl
 Download [JDK 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) 
 
 ```bash
-$ sudo cp jdk-8u221-linux-x64.tar.gz /usr/lib/jvm/
+$ sudo cp jdk-8u231-linux-x64.tar.gz /usr/lib/jvm/
 $ cd /usr/lib/jvm/
-$ sudo tar -xvzf jdk-8u221-linux-x64.tar.gz
-$ sudo rm -rf jdk-8u221-linux-x64.tar.gz
+$ sudo tar -xvzf jdk-8u231-linux-x64.tar.gz
+$ sudo rm -rf jdk-8u231-linux-x64.tar.gz
 ```
-Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_221/bin:/usr/lib/jvm/jdk1.8.0_221/db/bin:/usr/lib/jvm/jdk1.8.0_221/jre/bin
+Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/db/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin
 
 ![/etc/environment](img01.png)  
 
@@ -66,10 +66,10 @@ Open thw file ".bashrc" and insert:
 ![bashrc](img02.png)  
 
 ```bash
-$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_221/bin/java" 0
-$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_221/bin/javac" 0
-$ sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_221/bin/java
-$ sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_221/bin/javac
+$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_231/bin/java" 0
+$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_231/bin/javac" 0
+$ sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_231/bin/java
+$ sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_231/bin/javac
 $ update-alternatives --list java
 $ update-alternatives --list javac
 $ java -version
