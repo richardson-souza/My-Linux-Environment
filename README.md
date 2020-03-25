@@ -47,15 +47,22 @@ $ sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 $ sudo apt install curl
 ```
 
-## Java 8  
+## OpenJDK 12
 
-Download [JDK 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html) 
+Download [OpenJDK](https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz) 
 
 ```bash
-$ sudo cp jdk-8u231-linux-x64.tar.gz /usr/lib/jvm/
-$ cd /usr/lib/jvm/
-$ sudo tar -xvzf jdk-8u231-linux-x64.tar.gz
-$ sudo rm -rf jdk-8u231-linux-x64.tar.gz
+$ wget https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz
+$ tar -zxvf openjdk-12.0.2_linux-x64_bin.tar.gz
+$ sudo mkdir /opt/openjdk
+$ sudo mv jdk-12.0.2 /opt/openjdk
+$ JAVA_HOME=/opt/openjdk/jdk-12.0.2/
+$ sudo update-alternatives --install /usr/bin/java java ${JAVA_HOME}/bin/java 20000
+$ sudo update-alternatives --install /usr/bin/javac javac ${JAVA_HOME}/bin/javac 20000
+$ sudo update-alternatives --config java
+$ sudo update-alternatives --config javac
+$ java -version
+$ javac -version
 ```
 Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/db/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin
 
