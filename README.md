@@ -64,13 +64,6 @@ $ sudo update-alternatives --config javac
 $ java -version
 $ javac -version
 ```
-Open the file /etc/environment and insert: /usr/lib/jvm/jdk1.8.0_231/bin:/usr/lib/jvm/jdk1.8.0_231/db/bin:/usr/lib/jvm/jdk1.8.0_231/jre/bin
-
-![/etc/environment](img01.png)  
-
-Open thw file ".bashrc" and insert:
-
-![bashrc](img02.png)  
 
 ```bash
 $ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_231/bin/java" 0
