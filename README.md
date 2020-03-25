@@ -65,31 +65,18 @@ $ java -version
 $ javac -version
 ```
 
-```bash
-$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_231/bin/java" 0
-$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_231/bin/javac" 0
-$ sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_231/bin/java
-$ sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_231/bin/javac
-$ update-alternatives --list java
-$ update-alternatives --list javac
-$ java -version
-$ javac -version
-```  
-
 ## Node  
 
 ```bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 $ source ~/.bashrc
-$ nvm ls-remote
-$ nvm install 8.16.0
+$ nvm install node
 ```  
 
 ## IONIC
 
 ```bash 
-$ npm install -g ionic@latest-3
-$ npm install -g cordova
+$ npm install -g @ionic/cli
 $ ionic start myApp tabs
 $ cd myApp/
 $ ionic serve
