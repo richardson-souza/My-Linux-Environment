@@ -135,6 +135,7 @@ $ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/s
 $ sudo apt-get update && sudo apt-get install spotify-client
 
 
+
 Restart the system.  
 
 ## Acknowledgments
