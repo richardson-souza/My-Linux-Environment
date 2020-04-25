@@ -1,6 +1,6 @@
 # My Linux Environment  
 
-Setup and software of my personal laptop, powered by [Ubuntu Linux 19.04](http://releases.ubuntu.com/19.04/ubuntu-19.04-desktop-amd64.iso).  
+Setup and software of my personal laptop, powered by [Ubuntu Linux 20.04](https://ubuntu.com/download/desktop).  
 
 ## First Update
 
