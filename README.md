@@ -149,39 +149,49 @@ $ docker-compose --version
 The base installer is available for download below  
 A instalação base esta disponível abaixo  
 $ wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run
+
 Switch to tty3 by pressing Ctl+Alt+F3  
-Mude pata tt3 (Crtl+Alt+F3)  
+Mude pata tt3 (Crtl+Alt+F3)
+
 Isolate multi-user.target  
 Isole multi-user.target  
 $ sudo systemctl isolate multi-user.target
+
 Note that nvidia-drm is currently in use  
 Veja que nvidia-drm ainda esta em uso  
 $ lsmod | grep nvidia.drm
+
 Unload nvidia-drm  
 $ sudo modprobe -r nvidia-drm
+
 nvidia-drm is not in use anymore  
 nvidia-drm não está mais em uso  
 $ lsmod | grep nvidia.drm  
+
 Go to your download folder and run the cuda installation  
 Vá até o local do dowload e execute o arquivo de instalação  
 $ sudo bash cuda_11.1.0_455.23.05_linux.run  
+
 When installation has finished, confirm that the CUDA Version has been updated  
 Quando a instalação terminar, confirme se a versão do CUDA foi atualizada  
 $ nvidia-smi  
+
 Start the GUI again  
 Inicie novamente o modo gráfico  
 $ sudo systemctl start graphical.target  
+
 Open the file ".bashrc" by running
 Abra o arquivo ".bashrc" executando  
 $ sudo vim ~/.bashrc  
+
 Add the following lines at the end of the file  
-Adicione as linhas abaixo ao final do arquivo 
+Adicione as linhas abaixo ao final do arquivo  
 
 #set PATH for cuda 11.1 installation
 if [ -d "/usr/local/cuda-11.1/bin/" ]; then
     export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-fi
+fi  
 
 Reload the file ".bashrc"  
 Recarregue o arquivo ".bashrc"  
