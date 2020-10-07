@@ -1,16 +1,20 @@
-# My Linux Environment  
+## My Linux Environment
+### Meu Ambiente Linux
 
-Setup and software of my personal laptop, powered by [Ubuntu Linux 20.04](https://ubuntu.com/download/desktop).  
+Setup and software of my personal laptop, powered by [Ubuntu Linux 18.04](https://ubuntu.com/download/desktop).  
 
 ## First Update
+### Primeira atualização
 
-This is the first thing you should do after fresh installing Ubuntu.
+This is the first thing you should do after fresh installing Ubuntu  
+Essa é a primeira coisa a fazer após uma instalação nova
 
 ```bash
 $ sudo apt update && sudo apt upgrade
 ```
 
 ## Enable Canonical Partners repo
+### Habilitar repositório de parceiros
 
 ```bash
 $ sudo sed -i 's/# deb http/deb http/g' /etc/apt/sources.list
@@ -24,18 +28,21 @@ $ sudo apt install build-essential python-setuptools python-dev python3-distutil
 ```
 
 ## Install Media Codecs
+### Instalar pacotes multimídia
 
 ```bash
 $ sudo apt install ubuntu-restricted-extras
 ```
 
 ## Enable 'Minimize on Click' for the Ubuntu Dock
+### Habilitar 'Minimizar ao clicar' para o Ubuntu Dock
 
 ```bash
 $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
 
 ## Gnome Tweaks and Show/Hide All Hidden Startup Applications
+### Mostar aplicações ocultas que iniciam com o sistema
 
 ```bash
 $ sudo apt install gnome-tweaks
@@ -47,22 +54,9 @@ $ sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 $ sudo apt install curl
 ```
 
-## OpenJDK 12
-
-Download [OpenJDK](https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz) 
-
+## OpenJDK 8
 ```bash
-$ wget https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz
-$ tar -zxvf openjdk-12.0.2_linux-x64_bin.tar.gz
-$ sudo mkdir /opt/openjdk
-$ sudo mv jdk-12.0.2 /opt/openjdk
-$ JAVA_HOME=/opt/openjdk/jdk-12.0.2/
-$ sudo update-alternatives --install /usr/bin/java java ${JAVA_HOME}/bin/java 20000
-$ sudo update-alternatives --install /usr/bin/javac javac ${JAVA_HOME}/bin/javac 20000
-$ sudo update-alternatives --config java
-$ sudo update-alternatives --config javac
-$ java -version
-$ javac -version
+$ sudo apt-get install openjdk-8-*
 ```
 
 ## Node  
@@ -81,7 +75,8 @@ $ ionic start myApp tabs
 $ cd myApp/
 $ ionic serve
 ```  
-If it works smoothly continue to build on Android device
+If it works smoothly continue to build on Android device  
+Se tudo funcionar pode continuar para fazer build em dispositivos Android
 
 ### Build on device
 
@@ -115,17 +110,121 @@ Now, inside de project execute:
 $ ionic cordova run android --device
 ```  
 
-### Docker  
+## Install Docker  
+### Instalar docker
 
 ```bash 
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge test"
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+$ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
-$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-$ sudo chmod +x /usr/local/bin/docker-compose
-$ sudo systemctl status docker
 $ sudo usermod -aG docker $USER
+
+Reiniciar
+Restart 
+$ sudo shutdown -r now
 ``` 
+## Install Docker Compose
+### Instalar docker compose
+
+```bash
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+$ docker-compose --version
+```
+
+## Install CUDA 11.1
+### Instalar CUDA 11.1
+```bash
+The base installer is available for download below  
+A instalação base esta disponível abaixo  
+$ wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda_11.1.0_455.23.05_linux.run
+Switch to tty3 by pressing Ctl+Alt+F3  
+Mude pata tt3 (Crtl+Alt+F3)  
+Isolate multi-user.target  
+Isole multi-user.target  
+$ sudo systemctl isolate multi-user.target
+Note that nvidia-drm is currently in use  
+Veja que nvidia-drm ainda esta em uso  
+$ lsmod | grep nvidia.drm
+Unload nvidia-drm  
+$ sudo modprobe -r nvidia-drm
+nvidia-drm is not in use anymore  
+nvidia-drm não está mais em uso  
+$ lsmod | grep nvidia.drm  
+Go to your download folder and run the cuda installation  
+Vá até o local do dowload e execute o arquivo de instalação  
+$ sudo bash cuda_11.1.0_455.23.05_linux.run  
+When installation has finished, confirm that the CUDA Version has been updated  
+Quando a instalação terminar, confirme se a versão do CUDA foi atualizada  
+$ nvidia-smi  
+Start the GUI again  
+Inicie novamente o modo gráfico  
+$ sudo systemctl start graphical.target  
+Open the file ".bashrc" by running
+Abra o arquivo ".bashrc" executando  
+$ sudo vim ~/.bashrc  
+Add the following lines at the end of the file  
+Adicione as linhas abaixo ao final do arquivo 
+
+#set PATH for cuda 11.1 installation
+if [ -d "/usr/local/cuda-11.1/bin/" ]; then
+    export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+
+Reload the file ".bashrc"  
+Recarregue o arquivo ".bashrc"  
+$ source ~/.bashrc  
+
+Check the versions for the installation  
+Verifique a versão instalada
+$ nvcc --version
+```
+
+## Start a TensorFlow Docker container
+### Iniciar Tensorflow com Docker
+
+```bash
+
+Setup the stable repository and the GPG key  
+Incluir um repositório estável
+
+$ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+$ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+$ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+$ sudo apt-get update
+$ sudo apt-get install -y nvidia-docker2
+$ sudo systemctl restart docker
+
+Check instalation  
+Verifique a instalação  
+$ docker run --rm --gpus all nvidia/cuda:11.1-base nvidia-smi
+
+Example using CPU-only images  
+Exemplo usando apenad imagens com suporte a CPU
+$ docker run -it --rm tensorflow/tensorflow \
+     python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+Verify your nvidia-docker installation  
+Verifique a instalação do nvidia-docker
+$ docker run --gpus all --rm nvidia/cuda nvidia-smi
+
+Example using GPU-enabled image  
+Exemplo usando imagens com suporte a GPU  
+$ docker run --gpus all -it --rm tensorflow/tensorflow:latest-gpu \
+     python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+```
 
 ### Spotify  
 
@@ -142,5 +241,9 @@ Restart the system.
 [OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)  
 [NVM](https://github.com/creationix/nvm)  
 [IONIC](https://ionicframework.com/docs/intro/installation/)
+[TENSORFLOW DOCKER](https://www.tensorflow.org/install/docker)
+[NVIDIA_DOCKER](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide)
+[DOCKER](https://docs.docker.com/engine/install/ubuntu/)
+[DOCKER-COMPOSE](https://docs.docker.com/compose/install/)
  
 
