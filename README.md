@@ -250,10 +250,10 @@ Restart the system.
 
 [OMG Ubuntu](https://www.omgubuntu.co.uk/2018/04/things-to-do-after-installing-ubuntu-18-04)  
 [NVM](https://github.com/creationix/nvm)  
-[IONIC](https://ionicframework.com/docs/intro/installation/)
-[TENSORFLOW DOCKER](https://www.tensorflow.org/install/docker)
-[NVIDIA_DOCKER](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide)
-[DOCKER](https://docs.docker.com/engine/install/ubuntu/)
-[DOCKER-COMPOSE](https://docs.docker.com/compose/install/)
+[IONIC](https://ionicframework.com/docs/intro/installation/)  
+[TENSORFLOW DOCKER](https://www.tensorflow.org/install/docker)  
+[NVIDIA_DOCKER](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide)  
+[DOCKER](https://docs.docker.com/engine/install/ubuntu/)  
+[DOCKER-COMPOSE](https://docs.docker.com/compose/install/)  
  
 
